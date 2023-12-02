@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/money.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.input-value-to-convert, .container-to-convert select, .container-converted select {
+    width: 230px;
+    height: 40px;
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    padding-left: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container-to-convert select, .container-converted select {
+    margin-top: 30px;
+}
+
+.value-to-convert p {
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.container-principal {
+    width: 900px;
+    height: 450px;
+    background-color: #D9CCB4;
+    border: 3px solid #0C0F40;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px #A67051;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: calc(100% / 2) - 60px;
+    top: 60px;
+}
+
+.value-to-convert {
+    padding-top: 55px; /* 73px; */
+    margin: 0 auto;
+}
+
+.container-conversor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 38px;
+}
+
+.seta {
+    width: 50px;
+    height: 50px;
+}
+
+.img-to-convert, .img-converted {
+    width: 80px;
+    height: 80px;
+    margin: 23px 0 14px;
+}
+
+.container-to-convert, .container-converted {
+    width: 330px;
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid #0C0F40;
+    box-shadow: 4px 4px 4px 0px #00000040;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-convert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 20px 0 20px;
+}
+
+button {
+    width: 115px;
+    height: 40px;
+    margin-top: 30px;
+    background-color: #0C0F40;
+    color: #A67051;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #D9CCB4;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.currency-converted-label, .currency-to-convert-label {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.value-to-convert-label, .value-converted-label {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+span {
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 10px;
+}
