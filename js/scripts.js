@@ -24,7 +24,7 @@ function convertValues() {
         style: "currency",
         currency: "BRL"
     }).format(valueToConvert));
-
+    
     if (currencyToConvert == "usd") {
         const valueConverted = valueToConvert / dolarToday;
         console.log(valueConverted);
