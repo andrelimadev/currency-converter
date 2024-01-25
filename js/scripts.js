@@ -1,24 +1,26 @@
 // Em breve haverão modificações como APIs para buscar a cotação do dia
 // e conversão de valores entre todas as moedas disponíveis
 
-// Valores das moedas do dia 02/12/2023
-
-const dolarToday = 4.877;
-const euroToday = 5.301;
-const libraToday = 6.194;
-const ieneToday = 0.0478;
-const pesoArgToday = 0.013;
-const bitcoinToday = 191000.55;
-
-// Fim das cotações
+// API COTAÇÕES
+//
+// https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,GBP-BRL,JPY-BRL,ARS-BRL,BTC-BRL
 
 const convertButton = document.querySelector(".convert-button");
 
-function convertValues() {
+async function convertValues() {
     
     const valueToConvert = document.querySelector(".input-value-to-convert").value;
     const currencyToConvert = document.querySelector(".currency-to-convert").value;
     document.querySelector(".value-to-convert-label").innerHTML = (valueToConvert);
+
+    const data = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,GBP-BRL,JPY-BRL,ARS-BRL,BTC-BRL").then(response => response.json());
+
+    const dolarToday = data.USDBRL.high;
+    const euroToday = data.EURBRL.high;
+    const libraToday = data.GBPBRL.high;
+    const ieneToday = data.JPYBRL.high;
+    const pesoArgToday = data.ARSBRL.high;
+    const bitcoinToday = data.BTCBRL.high;
 
     document.querySelector(".value-to-convert-label").innerHTML = (new Intl.NumberFormat("pt-BR", {
         style: "currency",
